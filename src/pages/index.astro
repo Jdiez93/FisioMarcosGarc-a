@@ -1,0 +1,746 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="FisioMarcosGarcía">
+  <!-- HEADER / NAVBAR -->
+  <header class="sticky top-0 z-30 border-b border-white/5 bg-slate-950/80 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <!-- Logo / Nombre clínica -->
+      <a href="/" class="inline-flex items-center gap-2 shrink-0">
+        <div class="h-9 w-9 rounded-2xl bg-emerald-500/15 border border-emerald-400/60 flex items-center justify-center text-emerald-300 text-xl">
+          🏥
+        </div>
+        <div class="flex flex-col leading-tight">
+          <span class="font-semibold text-sm sm:text-base">
+            FisioMarcosGarcía
+          </span>
+          <span class="text-[11px] sm:text-xs text-slate-400">
+            Clínica de fisioterapia
+          </span>
+        </div>
+      </a>
+
+      <!-- Navegación escritorio / tablet -->
+      <nav
+        class="hidden md:flex items-center gap-6 text-sm"
+        aria-label="Navegación principal"
+      >
+        <a href="/" class="text-emerald-300">
+          Inicio
+        </a>
+        <a href="/servicios" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Servicios
+        </a>
+        <a href="/centro" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Cómo trabajamos
+        </a>
+        <a href="/equipo" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Equipo
+        </a>
+        <a href="/contacto" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Contacto
+        </a>
+      </nav>
+
+      <!-- Botón hamburguesa solo en móvil -->
+      <button
+        type="button"
+        class="md:hidden inline-flex items-center justify-center rounded-full border border-slate-700/80 px-3 py-2 text-xs font-medium text-slate-200 hover:bg-slate-900/70 hover:border-slate-500 transition-colors"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        data-menu-toggle
+      >
+        <span class="mr-2">Menú</span>
+        <span class="relative flex h-3 w-3">
+          <span
+            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-40"
+          ></span>
+          <span
+            class="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"
+          ></span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Menú desplegable móvil -->
+    <div
+      class="md:hidden border-t border-white/5 bg-slate-950/95 backdrop-blur-sm"
+      data-menu
+      hidden
+    >
+      <nav
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-2 text-sm"
+        aria-label="Navegación móvil"
+      >
+        <a
+          href="/"
+          class="py-1 text-emerald-300"
+          data-menu-item
+        >
+          Inicio
+        </a>
+        <a
+          href="/servicios"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Servicios
+        </a>
+        <a
+          href="/centro"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Cómo trabajamos
+        </a>
+        <a
+          href="/equipo"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Equipo
+        </a>
+        <a
+          href="/contacto"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Contacto
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN HOME (informativa) -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 space-y-16">
+    <!-- HERO -->
+    <section
+      id="inicio"
+      class="grid gap-10 lg:grid-cols-[1.2fr,1fr] items-center"
+    >
+      <!-- Columna texto -->
+      <div class="space-y-6" data-animate="left">
+        <p class="text-xs font-medium tracking-[0.22em] text-emerald-400 uppercase">
+          Fisioterapia avanzada en tu ciudad
+        </p>
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
+          Volver a moverte
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-sky-400">
+            sin dolor
+          </span>
+          es posible.
+        </h1>
+
+        <p class="text-slate-300 text-sm sm:text-base max-w-xl">
+          En FisioClinic analizamos tu caso en profundidad, te explicamos qué está pasando
+          y diseñamos un plan de tratamiento claro para que vuelvas a entrenar, trabajar
+          y vivir con menos dolor y más confianza.
+        </p>
+
+        <div class="grid gap-4 sm:grid-cols-2 text-sm">
+          <div class="flex items-start gap-3">
+            <div class="mt-1 h-7 w-7 rounded-full bg-emerald-500/15 border border-emerald-400/50 flex items-center justify-center text-xs">
+              ✔
+            </div>
+            <div>
+              <p class="font-medium text-slate-100">
+                Sesiones individuales de 45–60 minutos
+              </p>
+              <p class="text-slate-400">
+                Tiempo suficiente para valorar, tratar y resolver dudas sin prisas.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="mt-1 h-7 w-7 rounded-full bg-sky-500/15 border border-sky-400/50 flex items-center justify-center text-xs">
+              🏃
+            </div>
+            <div>
+              <p class="font-medium text-slate-100">
+                Especialistas en dolor y deporte
+              </p>
+              <p class="text-slate-400">
+                Desde dolor lumbar y cervical hasta lesiones deportivas y postquirúrgicas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-4 text-xs sm:text-sm text-slate-400 pt-1">
+          <div class="flex items-center gap-2">
+            <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+            <span>Tratamientos basados en evidencia científica actualizada.</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="inline-flex h-2 w-2 rounded-full bg-sky-400"></span>
+            <span>Explicaciones claras, sin tecnicismos innecesarios.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna imagen / tarjeta -->
+      <div class="relative" data-animate="right">
+        <div class="absolute -top-6 -left-6 h-24 w-24 rounded-full bg-emerald-500/10 blur-3xl"></div>
+        <div class="absolute -bottom-8 -right-4 h-28 w-28 rounded-full bg-sky-500/10 blur-3xl"></div>
+
+        <div class="relative rounded-3xl border border-white/10 bg-slate-900/60 shadow-2xl overflow-hidden">
+          <!-- Imagen -->
+          <div class="aspect-[4/3] overflow-hidden">
+ <img
+  src="/FisioTobillo.png"
+  alt="Fisioterapeuta trabajando con un paciente"
+  class="h-full w-full object-cover"
+  loading="lazy"
+/>
+
+          </div>
+
+          <!-- Info overlay abajo -->
+          <div class="p-4 sm:p-5 border-t border-white/10 bg-slate-950/70 backdrop-blur">
+            <div class="flex items-center justify-between gap-3 text-xs sm:text-sm">
+              <div>
+                <p class="font-medium text-slate-100">
+                  Primera valoración detallada
+                </p>
+                <p class="text-slate-400">
+                  Revisamos tu historia, pruebas médicas y objetivos para planificar el tratamiento.
+                </p>
+              </div>
+              <div class="shrink-0 text-right">
+                <p class="text-emerald-300 font-semibold text-sm">
+                  +500
+                </p>
+                <p class="text-[11px] text-slate-400">
+                  Pacientes tratados<br />en los últimos años
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TARIFAS: BONOS DE SESIONES -->
+    <section class="space-y-8" aria-labelledby="tarifas-title">
+      <header class="space-y-3" data-animate="up">
+        <p class="text-xs font-medium tracking-[0.22em] text-emerald-400 uppercase">
+          Tarifas
+        </p>
+        <h2
+          id="tarifas-title"
+          class="text-2xl sm:text-3xl font-semibold tracking-tight"
+        >
+          Bonos de sesiones de fisioterapia
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl">
+          Estos precios son orientativos y pensados para que puedas hacerte una idea
+          del coste según el número de sesiones que puedas necesitar. No se realizan
+          pagos ni reservas online desde esta página.
+        </p>
+      </header>
+
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <!-- 1 sesión -->
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 flex flex-col gap-4"
+          data-animate="left"
+        >
+          <div>
+            <p class="text-xs uppercase tracking-[0.18em] text-slate-400">
+              Bono
+            </p>
+            <h3 class="mt-1 text-lg font-semibold">
+              1 sesión
+            </h3>
+          </div>
+          <div>
+            <p class="text-3xl font-semibold">
+              45&nbsp;€
+            </p>
+            <p class="text-xs text-slate-400 mt-1">
+              Precio orientativo por sesión individual.
+            </p>
+          </div>
+          <ul class="mt-auto text-xs text-slate-400 space-y-1">
+            <li>· Ideal si quieres una valoración puntual.</li>
+            <li>· Para molestias concretas o revisión de ejercicios.</li>
+          </ul>
+        </article>
+
+        <!-- 5 sesiones -->
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 flex flex-col gap-4"
+          data-animate="up"
+        >
+          <div>
+            <p class="text-xs uppercase tracking-[0.18em] text-slate-400">
+              Bono
+            </p>
+            <h3 class="mt-1 text-lg font-semibold">
+              5 sesiones
+            </h3>
+          </div>
+          <div>
+            <p class="text-3xl font-semibold">
+              210&nbsp;€
+            </p>
+            <p class="text-xs text-slate-400 mt-1">
+              Aproximadamente 42&nbsp;€ por sesión.
+            </p>
+          </div>
+          <ul class="mt-auto text-xs text-slate-400 space-y-1">
+            <li>· Pensado para procesos de corta duración.</li>
+            <li>· Seguimiento en las primeras semanas de tratamiento.</li>
+          </ul>
+        </article>
+
+        <!-- 10 sesiones (más comprado) -->
+        <article
+          class="relative rounded-3xl border border-emerald-400/60 bg-emerald-500/5 p-5 sm:p-6 flex flex-col gap-4 shadow-lg shadow-emerald-500/20"
+          data-animate="up"
+        >
+          <div class="absolute -top-3 right-4">
+            <span class="inline-flex items-center rounded-full bg-emerald-400 text-slate-950 text-[11px] font-semibold px-3 py-1 shadow-md">
+              Más comprado
+            </span>
+          </div>
+          <div class="mt-2">
+            <p class="text-xs uppercase tracking-[0.18em] text-emerald-300">
+              Bono recomendado
+            </p>
+            <h3 class="mt-1 text-lg font-semibold">
+              10 sesiones
+            </h3>
+          </div>
+          <div>
+            <p class="text-3xl font-semibold">
+              390&nbsp;€
+            </p>
+            <p class="text-xs text-emerald-100 mt-1">
+              Aproximadamente 39&nbsp;€ por sesión.
+            </p>
+          </div>
+          <ul class="mt-auto text-xs text-emerald-50 space-y-1">
+            <li>· Ideal para lesiones deportivas y procesos de rehabilitación.</li>
+            <li>· Permite planificar la recuperación con tiempo y progresión.</li>
+          </ul>
+        </article>
+
+        <!-- 20 sesiones -->
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 flex flex-col gap-4"
+          data-animate="right"
+        >
+          <div>
+            <p class="text-xs uppercase tracking-[0.18em] text-slate-400">
+              Bono
+            </p>
+            <h3 class="mt-1 text-lg font-semibold">
+              20 sesiones
+            </h3>
+          </div>
+          <div>
+            <p class="text-3xl font-semibold">
+              720&nbsp;€
+            </p>
+            <p class="text-xs text-slate-400 mt-1">
+              Aproximadamente 36&nbsp;€ por sesión.
+            </p>
+          </div>
+          <ul class="mt-auto text-xs text-slate-400 space-y-1">
+            <li>· Enfocado a procesos largos o condiciones crónicas.</li>
+            <li>· Mayor control y ajuste del tratamiento en el tiempo.</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="text-[11px] sm:text-xs text-slate-500" data-animate="up">
+        * Los importes y descuentos son orientativos y pueden variar. No suponen oferta vinculante
+        ni contratación online. Confirma siempre las tarifas actualizadas directamente en la clínica.
+      </p>
+    </section>
+
+    <!-- POR QUÉ ELEGIRNOS -->
+    <section class="space-y-8" aria-labelledby="por-que-elegirnos-title">
+      <header class="space-y-3" data-animate="up">
+        <p class="text-xs font-medium tracking-[0.22em] text-emerald-400 uppercase">
+          Por qué elegirnos
+        </p>
+        <h2
+          id="por-que-elegirnos-title"
+          class="text-2xl sm:text-3xl font-semibold tracking-tight"
+        >
+          No solo tratamos el dolor, tratamos a la persona
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl">
+          Nuestro objetivo no es que estés bien solo un par de días, sino que
+          entiendas qué te pasa, qué puedes hacer y cómo evitar recaídas en el futuro.
+        </p>
+      </header>
+
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <!-- Tarjeta 1 -->
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 space-y-3 transition-all duration-300 hover:border-emerald-400/60 hover:shadow-[0_0_12px_rgba(16,185,129,0.25)] hover:-translate-y-1"
+          data-animate="left"
+        >
+          <div class="flex items-center gap-3">
+            <div class="h-9 w-9 rounded-2xl bg-emerald-500/15 border border-emerald-400/50 flex items-center justify-center text-xl">
+              📚
+            </div>
+            <h3 class="font-semibold text-sm sm:text-base">
+              Basado en evidencia
+            </h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300">
+            Utilizamos técnicas y ejercicios respaldados por la evidencia científica
+            más actual, alejándonos de tratamientos obsoletos o poco claros.
+          </p>
+        </article>
+
+        <!-- Tarjeta 2 -->
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 space-y-3 transition-all duration-300 hover:border-sky-400/60 hover:shadow-[0_0_12px_rgba(56,189,248,0.25)] hover:-translate-y-1"
+          data-animate="up"
+        >
+          <div class="flex items-center gap-3">
+            <div class="h-9 w-9 rounded-2xl bg-sky-500/15 border border-sky-400/50 flex items-center justify-center text-xl">
+              🤝
+            </div>
+            <h3 class="font-semibold text-sm sm:text-base">
+              Tiempo para escucharte
+            </h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300">
+            Reservamos sesiones de 45–60 minutos para poder valorar bien tu caso,
+            explicarte las opciones y resolver todas tus dudas con calma.
+          </p>
+        </article>
+
+        <!-- Tarjeta 3 -->
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 space-y-3 transition-all duration-300 hover:border-purple-400/60 hover:shadow-[0_0_12px_rgba(192,132,252,0.25)] hover:-translate-y-1"
+          data-animate="up"
+        >
+          <div class="flex items-center gap-3">
+            <div class="h-9 w-9 rounded-2xl bg-purple-500/15 border border-purple-400/50 flex items-center justify-center text-xl">
+              🏃‍♂️
+            </div>
+            <h3 class="font-semibold text-sm sm:text-base">
+              Movimiento como tratamiento
+            </h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300">
+            Más allá de la camilla: usamos el ejercicio terapéutico y la readaptación
+            al esfuerzo para que vuelvas a hacer lo que te gusta de forma segura.
+          </p>
+        </article>
+
+        <!-- Tarjeta 4 -->
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 space-y-3 transition-all duration-300 hover:border-amber-400/60 hover:shadow-[0_0_12px_rgba(251,191,36,0.25)] hover:-translate-y-1"
+          data-animate="right"
+        >
+          <div class="flex items-center gap-3">
+            <div class="h-9 w-9 rounded-2xl bg-amber-500/15 border border-amber-400/50 flex items-center justify-center text-xl">
+              🙂 
+            </div>
+            <h3 class="font-semibold text-sm sm:text-base">
+              Trato cercano y honesto
+            </h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300">
+            Te contamos las cosas tal y como son, sin promesas irreales ni tratamientos
+            innecesarios. Si algo no es fisioterapia, te lo diremos.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="space-y-8">
+      <header class="space-y-3" data-animate="up">
+        <p class="text-xs font-medium tracking-[0.22em] text-emerald-400 uppercase">
+          Preguntas frecuentes
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">
+          Antes de venir, quizá te preguntes…
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl">
+          Resolvemos aquí las dudas más habituales. Si necesitas más detalles, siempre
+          podrás consultarlos en persona o en las otras páginas de la web.
+        </p>
+      </header>
+
+      <div class="space-y-3 rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 text-sm">
+        <!-- 1 -->
+        <details class="group" data-animate="up">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+            <span>¿Puedo venir sin que me vea antes un médico?</span>
+            <span class="text-xs text-slate-400 group-open:hidden">+</span>
+            <span class="text-xs text-slate-400 hidden group-open:inline">−</span>
+          </summary>
+          <p class="mt-2 text-slate-300">
+            Sí. La fisioterapia puede ser el primer paso en muchos casos. Si detectamos algo
+            que requiera revisión médica o pruebas, te lo indicaremos desde la primera sesión.
+          </p>
+        </details>
+
+        <!-- 2 -->
+        <details class="group" data-animate="up">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+            <span>¿En cuántas sesiones notaré mejoría?</span>
+            <span class="text-xs text-slate-400 group-open:hidden">+</span>
+            <span class="text-xs text-slate-400 hidden group-open:inline">−</span>
+          </summary>
+          <p class="mt-2 text-slate-300">
+            Depende del tipo de lesión y del tiempo que lleves con el dolor. Muchas personas
+            notan cambios importantes entre 1 y 3 sesiones; otras necesitan un proceso más
+            progresivo. Desde el inicio te daremos un plan realista.
+          </p>
+        </details>
+
+        <!-- 3 -->
+        <details class="group" data-animate="up">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+            <span>¿Puedo cancelar mi sesión?</span>
+            <span class="text-xs text-slate-400 group-open:hidden">+</span>
+            <span class="text-xs text-slate-400 hidden group-open:inline">−</span>
+          </summary>
+          <p class="mt-2 text-slate-300">
+            Sí, puedes cancelar o modificar tu sesión avisando con al menos 24 horas de antelación.
+            Así liberamos el hueco para otra persona que lo necesite. Las cancelaciones con muy
+            poca antelación podrían contabilizarse como sesión utilizada.
+          </p>
+        </details>
+
+        <!-- 4 -->
+        <details class="group" data-animate="up">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+            <span>¿Puedo compartir un bono de sesiones?</span>
+            <span class="text-xs text-slate-400 group-open:hidden">+</span>
+            <span class="text-xs text-slate-400 hidden group-open:inline">−</span>
+          </summary>
+          <p class="mt-2 text-slate-300">
+            Sí, los bonos pueden utilizarse entre miembros de una misma familia o pareja siempre
+            que lo aviséis. Queremos que sea flexible y cómodo para vosotros.
+          </p>
+        </details>
+
+        <!-- 5 -->
+        <details class="group" data-animate="up">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+            <span>¿Puedo pagar con tarjeta?</span>
+            <span class="text-xs text-slate-400 group-open:hidden">+</span>
+            <span class="text-xs text-slate-400 hidden group-open:inline">−</span>
+          </summary>
+          <p class="mt-2 text-slate-300">
+            Sí. Aceptamos pago con tarjeta y efectivo. Los bonos se pueden pagar en el centro
+            al inicio del tratamiento o sesión a sesión.
+          </p>
+        </details>
+
+        <!-- 6 -->
+        <details class="group" data-animate="up">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+            <span>¿Qué duración tiene una sesión?</span>
+            <span class="text-xs text-slate-400 group-open:hidden">+</span>
+            <span class="text-xs text-slate-400 hidden group-open:inline">−</span>
+          </summary>
+          <p class="mt-2 text-slate-300">
+            Cada sesión dura entre 45 y 60 minutos según el caso. Es tiempo suficiente para
+            valorar, tratar, ajustar ejercicios y resolver dudas sin prisas.
+          </p>
+        </details>
+
+        <!-- 7 -->
+        <details class="group" data-animate="up">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+            <span>¿Qué debo llevar a la primera visita?</span>
+            <span class="text-xs text-slate-400 group-open:hidden">+</span>
+            <span class="text-xs text-slate-400 hidden group-open:inline">−</span>
+          </summary>
+          <p class="mt-2 text-slate-300">
+            Solo ropa cómoda. Si tienes informes, resonancias, radiografías o informes médicos,
+            tráelos para que podamos revisarlos juntos.
+          </p>
+        </details>
+
+        <!-- 8 -->
+        <details class="group" data-animate="up">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+            <span>¿Cada cuánto debería venir a tratarme?</span>
+            <span class="text-xs text-slate-400 group-open:hidden">+</span>
+            <span class="text-xs text-slate-400 hidden group-open:inline">−</span>
+          </summary>
+          <p class="mt-2 text-slate-300">
+            Al inicio solemos vernos semanalmente para avanzar más rápido. Después las visitas
+            pueden espaciarse según tu evolución y tus objetivos.
+          </p>
+        </details>
+
+        <!-- 9 -->
+        <details class="group" data-animate="up">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+            <span>¿Puedo hacer ejercicio mientras estoy en tratamiento?</span>
+            <span class="text-xs text-slate-400 group-open:hidden">+</span>
+            <span class="text-xs text-slate-400 hidden group-open:inline">−</span>
+          </summary>
+          <p class="mt-2 text-slate-300">
+            La mayoría de veces sí. De hecho, el movimiento es parte clave de la recuperación.
+            Ajustamos el tipo de ejercicio, la carga y la frecuencia para que sea seguro y útil.
+          </p>
+        </details>
+
+        <!-- 10 -->
+        <details class="group" data-animate="up">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+            <span>¿Qué pasa si llevo mucho tiempo con dolor?</span>
+            <span class="text-xs text-slate-400 group-open:hidden">+</span>
+            <span class="text-xs text-slate-400 hidden group-open:inline">−</span>
+          </summary>
+          <p class="mt-2 text-slate-300">
+            El dolor persistente requiere un enfoque diferente. Evaluaremos no solo la zona dolorida,
+            sino también tus hábitos, trabajo, sueño y movimiento diario. Hemos ayudado
+            a muchos pacientes que llevaban meses o años con dolor.
+          </p>
+        </details>
+
+        <!-- 11 -->
+        <details class="group" data-animate="up">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+            <span>¿Puedo venir si estoy embarazada?</span>
+            <span class="text-xs text-slate-400 group-open:hidden">+</span>
+            <span class="text-xs text-slate-400 hidden group-open:inline">−</span>
+          </summary>
+          <p class="mt-2 text-slate-300">
+            En muchos casos sí podemos ayudar con molestias típicas del embarazo como dolor lumbar
+            o tensión pélvica. Valoraremos siempre la situación individual.
+          </p>
+        </details>
+
+        <!-- 12 -->
+        <details class="group" data-animate="up">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+            <span>¿Los bonos caducan?</span>
+            <span class="text-xs text-slate-400 group-open:hidden">+</span>
+            <span class="text-xs text-slate-400 hidden group-open:inline">−</span>
+          </summary>
+          <p class="mt-2 text-slate-300">
+            Sí, pero con un margen amplio (por ejemplo, entre 6 y 12 meses según el bono).
+            Si surge algo y necesitas ampliarlo, coméntanoslo y buscaremos la mejor opción.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Semilla de clases para que Tailwind no purgue animaciones -->
+    <div class="hidden opacity-0 opacity-100 -translate-x-10 translate-x-10 translate-y-10 translate-x-0 translate-y-0"></div>
+  </main>
+
+  <!-- Script: menú hamburguesa + animaciones scroll -->
+  <script>
+    // Menú móvil
+    const toggle = document.querySelector("[data-menu-toggle]");
+    const menu = document.querySelector("[data-menu]");
+    const items = document.querySelectorAll("[data-menu-item]");
+
+    if (toggle && menu) {
+      const closeMenu = () => {
+        menu.hidden = true;
+        toggle.setAttribute("aria-expanded", "false");
+      };
+
+      const openMenu = () => {
+        menu.hidden = false;
+        toggle.setAttribute("aria-expanded", "true");
+      };
+
+      toggle.addEventListener("click", () => {
+        const isOpen = toggle.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      items.forEach((item) => {
+        item.addEventListener("click", () => {
+          closeMenu();
+        });
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+          closeMenu();
+        }
+      });
+    }
+
+    // Animaciones al hacer scroll
+    const animatedEls = document.querySelectorAll("[data-animate]");
+
+    const applyHiddenState = (el) => {
+      const dir = el.getAttribute("data-animate") || "up";
+
+      el.classList.add("transition-all", "duration-700", "ease-out", "will-change-transform", "will-change-opacity");
+
+      el.classList.remove(
+        "opacity-100",
+        "translate-x-0",
+        "translate-y-0",
+        "-translate-x-10",
+        "translate-x-10",
+        "translate-y-10"
+      );
+
+      el.classList.add("opacity-0");
+
+      if (dir === "left") {
+        el.classList.add("-translate-x-10");
+      } else if (dir === "right") {
+        el.classList.add("translate-x-10");
+      } else {
+        el.classList.add("translate-y-10");
+      }
+    };
+
+    const applyVisibleState = (el) => {
+      const dir = el.getAttribute("data-animate") || "up";
+
+      el.classList.remove("opacity-0", "-translate-x-10", "translate-x-10", "translate-y-10");
+      el.classList.add("opacity-100");
+
+      if (dir === "left" || dir === "right") {
+        el.classList.add("translate-x-0");
+      } else {
+        el.classList.add("translate-y-0");
+      }
+    };
+
+    if (animatedEls.length > 0 && "IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const el = entry.target;
+            if (entry.isIntersecting) {
+              applyVisibleState(el);
+            } else {
+              applyHiddenState(el);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      animatedEls.forEach((el) => {
+        applyHiddenState(el);
+        observer.observe(el);
+      });
+    }
+  </script>
+</BaseLayout>

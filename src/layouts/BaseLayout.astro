@@ -1,0 +1,127 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "FisioMarcosGarcía",
+  description = "Clínica de fisioterapia moderna especializada en dolor, rehabilitación y rendimiento físico.",
+} = Astro.props;
+
+const year = new Date().getFullYear();
+---
+
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+   <link rel="icon" type="image/png" href="/IconoPestaña.png" />
+
+
+  </head>
+
+  <body class="min-h-screen bg-slate-950 text-slate-50 antialiased">
+    <!-- Fondo sutil moderno -->
+    <div class="fixed inset-0 -z-20 bg-[radial-gradient(circle_at_top,_#22c55e20,_transparent_60%),radial-gradient(circle_at_bottom,_#0ea5e920,_transparent_55%)]"></div>
+    <div class="fixed inset-0 -z-10 bg-gradient-to-b from-slate-950/70 via-slate-950 to-slate-950"></div>
+
+    <!-- Contenido de la página -->
+    <div class="relative min-h-screen flex flex-col">
+      <main class="flex-1">
+        <slot />
+      </main>
+
+      <footer class="border-t border-white/5 mt-12">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid gap-8 md:grid-cols-3 items-start">
+      <!-- Columna 1: logo + resumen -->
+      <div class="space-y-3">
+        <div class="inline-flex items-center gap-2">
+          <div class="h-9 w-9 rounded-2xl bg-emerald-500/15 border border-emerald-400/60 flex items-center justify-center text-emerald-300 text-xl">
+            🏥
+          </div>
+          <div class="flex flex-col leading-tight">
+            <span class="font-semibold text-sm sm:text-base">
+              FisioMarcosGarcía
+            </span>
+            <span class="text-[11px] sm:text-xs text-slate-400">
+              Clínica de fisioterapia avanzada
+            </span>
+          </div>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-400 max-w-xs">
+          Evaluación personalizada, tratamiento basado en evidencia y acompañamiento
+          para que recuperes tu movimiento con menos dolor y más seguridad.
+        </p>
+      </div>
+
+      <!-- Columna 2: navegación -->
+      <div class="space-y-3 text-xs sm:text-sm">
+        <h3 class="font-medium text-slate-100">
+          Navegación
+        </h3>
+        <nav class="flex flex-col gap-1.5 text-slate-400">
+          <a href="/" class="hover:text-emerald-300 transition-colors">
+            Inicio
+          </a>
+          <a href="/servicios" class="hover:text-emerald-300 transition-colors">
+            Servicios
+          </a>
+          <a href="/centro" class="hover:text-emerald-300 transition-colors">
+            Como trabajamos
+          </a>
+          <a href="/equipo" class="text-emerald-300">
+          Equipo
+        </a>
+
+          <a href="/contacto" class="hover:text-emerald-300 transition-colors">
+            Contacto
+          </a>
+        </nav>
+      </div>
+
+      <!-- Columna 3: contacto básico -->
+      <div class="space-y-3 text-xs sm:text-sm">
+        <h3 class="font-medium text-slate-100">
+          Información de contacto
+        </h3>
+        <div class="space-y-1.5 text-slate-400">
+          <p>
+            Teléfono orientativo:<br />
+            <span class="text-slate-200">+34 123 456 789</span>
+          </p>
+          <p>
+            Dirección orientativa:<br />
+            Calle Ejemplo 123, 1ºB<br />
+            28000 · Tu ciudad
+          </p>
+          <p>
+            Horario habitual:<br />
+            L–V · 09:00–14:00 y 16:00–20:00
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Franja inferior -->
+    <div class="border-t border-white/5 mt-6 pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-[11px] sm:text-xs text-slate-500">
+      <p>
+        © {year} FisioMarcosGarcía. Información web orientativa. No sustituye la valoración
+        presencial ni supone contratación online.
+      </p>
+      <p class="text-slate-500">
+        Política de privacidad y aviso legal disponibles en la clínica.
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+  </body>
+</html>

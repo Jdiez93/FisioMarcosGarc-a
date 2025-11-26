@@ -1,0 +1,563 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Servicios de fisioterapia · FisioClinic"
+  description="Descubre cómo trabajamos en FisioClinic: fisioterapia avanzada, rehabilitación deportiva, dolor crónico y recuperación postquirúrgica."
+>
+  <!-- HEADER / NAVBAR -->
+  <header class="sticky top-0 z-30 border-b border-white/5 bg-slate-950/80 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <!-- Logo / Nombre clínica -->
+      <a href="/" class="inline-flex items-center gap-2 shrink-0">
+        <div class="h-9 w-9 rounded-2xl bg-emerald-500/15 border border-emerald-400/60 flex items-center justify-center text-emerald-300 text-xl">
+          🏥
+        </div>
+        <div class="flex flex-col leading-tight">
+          <span class="font-semibold text-sm sm:text-base">
+            FisioMarcosGarcía
+          </span>
+          <span class="text-[11px] sm:text-xs text-slate-400">
+            Clínica de fisioterapia
+          </span>
+        </div>
+      </a>
+
+      <!-- Navegación escritorio / tablet -->
+      <nav
+        class="hidden md:flex items-center gap-6 text-sm"
+        aria-label="Navegación principal"
+      >
+        <a href="/" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Inicio
+        </a>
+        <a href="/servicios" class="text-emerald-300">
+          Servicios
+        </a>
+        <a href="/centro" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Cómo trabajamos
+        </a>
+        <a href="/equipo" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Equipo
+        </a>
+        <a href="/contacto" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Contacto
+        </a>
+      </nav>
+
+      <!-- Botón hamburguesa solo en móvil -->
+      <button
+        type="button"
+        class="md:hidden inline-flex items-center justify-center rounded-full border border-slate-700/80 px-3 py-2 text-xs font-medium text-slate-200 hover:bg-slate-900/70 hover:border-slate-500 transition-colors"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        data-menu-toggle
+      >
+        <span class="mr-2">Menú</span>
+        <span class="relative flex h-3 w-3">
+          <span
+            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-40"
+          ></span>
+          <span
+            class="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"
+          ></span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Menú desplegable móvil -->
+    <div
+      class="md:hidden border-t border-white/5 bg-slate-950/95 backdrop-blur-sm"
+      data-menu
+      hidden
+    >
+      <nav
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-2 text-sm"
+        aria-label="Navegación móvil"
+      >
+        <a
+          href="/"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Inicio
+        </a>
+        <a
+          href="/servicios"
+          class="py-1 text-emerald-300"
+          data-menu-item
+        >
+          Servicios
+        </a>
+        <a
+          href="/centro"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Cómo trabajamos
+        </a>
+        <a
+          href="/equipo"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Equipo
+        </a>
+        <a
+          href="/contacto"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Contacto
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN SERVICIOS -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 space-y-16">
+    <!-- HERO / INTRO SERVICIOS -->
+    <section class="space-y-8">
+      <div class="space-y-4 max-w-3xl" data-animate="left">
+        <p class="text-xs font-medium tracking-[0.22em] text-emerald-400 uppercase">
+          Tratamientos y enfoque
+        </p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
+          Servicios de fisioterapia pensados para tu día a día
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base">
+          No trabajamos con “protocolos estándar”. Cada tratamiento se adapta a tu historia,
+          tus objetivos y el momento en el que te encuentras. Combinamos terapia manual,
+          ejercicio terapéutico y educación en dolor para obtener cambios reales.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-3 text-xs sm:text-sm" data-animate="up">
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/40 bg-emerald-500/10 px-3 py-1 text-emerald-200">
+          <span class="text-[13px]">✔</span> Tratamiento individual
+        </span>
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-sky-400/40 bg-sky-500/10 px-3 py-1 text-sky-100">
+          <span class="text-[13px]">🧠</span> Educación en dolor
+        </span>
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-purple-400/40 bg-purple-500/10 px-3 py-1 text-purple-100">
+          <span class="text-[13px]">🏋️‍♂️</span> Ejercicio terapéutico
+        </span>
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-amber-400/40 bg-amber-500/10 px-3 py-1 text-amber-100">
+          <span class="text-[13px]">📈</span> Plan y seguimiento
+        </span>
+      </div>
+    </section>
+
+    <!-- BLOQUES DE SERVICIOS PRINCIPALES -->
+    <section class="space-y-6" aria-labelledby="servicios-principales-title">
+      <header class="space-y-2" data-animate="up">
+        <h2
+          id="servicios-principales-title"
+          class="text-2xl sm:text-3xl font-semibold tracking-tight"
+        >
+          Áreas principales de tratamiento
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl">
+          Estas son las áreas en las que más trabajamos en el día a día. Si tu caso no encaja
+          exactamente en una de ellas, lo valoraremos igualmente y te orientaremos.
+        </p>
+      </header>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <!-- Dolor musculoesquelético -->
+        <article
+          class="group rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 space-y-4 transition-all duration-300 hover:border-emerald-400/60 hover:shadow-[0_0_16px_rgba(16,185,129,0.25)] hover:-translate-y-1"
+          data-animate="left"
+        >
+          <div class="flex items-start gap-3">
+            <div class="h-10 w-10 rounded-2xl bg-emerald-500/15 border border-emerald-400/60 flex items-center justify-center text-xl">
+              💢
+            </div>
+            <div class="space-y-1">
+              <h3 class="font-semibold text-base sm:text-lg">
+                Dolor de espalda, cuello y articulaciones
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300">
+                Lumbalgias, cervicalgias, dolor de hombro, cadera o rodilla, así como molestias
+                relacionadas con el trabajo de oficina o esfuerzos repetitivos.
+              </p>
+            </div>
+          </div>
+          <ul class="text-xs text-slate-400 space-y-1">
+            <li>· Valoración global, no solo de la zona dolorida.</li>
+            <li>· Combinación de terapia manual y ejercicio específico.</li>
+            <li>· Estrategias para gestionar brotes y evitar recaídas.</li>
+          </ul>
+        </article>
+
+        <!-- Lesiones deportivas -->
+        <article
+          class="group rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 space-y-4 transition-all duration-300 hover:border-sky-400/60 hover:shadow-[0_0_16px_rgba(56,189,248,0.25)] hover:-translate-y-1"
+          data-animate="up"
+        >
+          <div class="flex items-start gap-3">
+            <div class="h-10 w-10 rounded-2xl bg-sky-500/15 border border-sky-400/60 flex items-center justify-center text-xl">
+              🏃‍♀️
+            </div>
+            <div class="space-y-1">
+              <h3 class="font-semibold text-base sm:text-lg">
+                Lesiones deportivas y readaptación
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300">
+                Lesiones musculares, tendinopatías, esguinces, dolor de rodilla en corredores
+                y retorno progresivo al deporte tras una pausa.
+              </p>
+            </div>
+          </div>
+          <ul class="text-xs text-slate-400 space-y-1">
+            <li>· Planificación de cargas y progresiones de ejercicio.</li>
+            <li>· Trabajo de fuerza, estabilidad y control motor.</li>
+            <li>· Coordinación con tu entrenador si lo deseas.</li>
+          </ul>
+        </article>
+
+        <!-- Postquirúrgico -->
+        <article
+          class="group rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 space-y-4 transition-all duration-300 hover:border-purple-400/60 hover:shadow-[0_0_16px_rgba(192,132,252,0.25)] hover:-translate-y-1"
+          data-animate="right"
+        >
+          <div class="flex items-start gap-3">
+            <div class="h-10 w-10 rounded-2xl bg-purple-500/15 border border-purple-400/60 flex items-center justify-center text-xl">
+              🦵
+            </div>
+            <div class="space-y-1">
+              <h3 class="font-semibold text-base sm:text-lg">
+                Rehabilitación postquirúrgica
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300">
+                Recuperación tras cirugía de rodilla, cadera, hombro u otras articulaciones,
+                respetando los tiempos de curación y objetivos médicos.
+              </p>
+            </div>
+          </div>
+          <ul class="text-xs text-slate-400 space-y-1">
+            <li>· Control de dolor e inflamación en fases iniciales.</li>
+            <li>· Recuperación de movilidad, fuerza y funcionalidad.</li>
+            <li>· Preparación para volver a la actividad diaria o deportiva.</li>
+          </ul>
+        </article>
+
+        <article
+          class="group rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 space-y-4 transition-all duration-300 hover:border-sky-400/60 hover:shadow-[0_0_16px_rgba(56,189,248,0.25)] hover:-translate-y-1"
+          data-animate="up"
+        >
+          <div class="flex items-start gap-3">
+            <div class="h-10 w-10 rounded-2xl bg-sky-500/15 border border-sky-400/60 flex items-center justify-center text-xl">
+              🧵
+            </div>
+            <div class="space-y-1">
+              <h3 class="font-semibold text-base sm:text-lg">
+                Punción seca / agujas
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300">
+                Alivio del dolor muscular mediante técnicas invasivas seguras para liberar puntos gatillo y mejorar la función del tejido.
+              </p>
+            </div>
+          </div>
+          <ul class="text-xs text-slate-400 space-y-1">
+            <li>· Reducción del dolor y la tensión profunda.</li>
+            <li>· Mejora de la movilidad y rendimiento muscular.</li>
+            <li>· Ideal para cervicalgias, lumbalgias y sobrecargas por deporte.</li>
+          </ul>
+        </article>
+      </div>
+
+      
+      
+    </section>
+
+    <!-- CÓMO TRABAJAMOS (3 PASOS) -->
+    <section class="space-y-8" aria-labelledby="como-trabajamos-title">
+      <header class="space-y-2" data-animate="up">
+        <h2
+          id="como-trabajamos-title"
+          class="text-2xl sm:text-3xl font-semibold tracking-tight"
+        >
+          Cómo será tu tratamiento, paso a paso
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl">
+          Queremos que sepas qué puedes esperar desde el primer día. No hay sorpresas:
+          solo un plan claro y ajustado a tu situación.
+        </p>
+      </header>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <!-- Paso 1 -->
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 space-y-3 transition-all duration-300 hover:border-emerald-400/60 hover:-translate-y-1"
+          data-animate="left"
+        >
+          <div class="space-y-1">
+            <h3 class="font-semibold text-sm sm:text-base">
+              Valoración inicial
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300">
+              Hablamos de tu caso, revisamos pruebas médicas si las tienes y realizamos
+              una exploración física para entender qué está pasando.
+            </p>
+          </div>
+
+          <ul class="text-[11px] text-slate-400 space-y-1">
+            <li>· Entrevista clínica completa.</li>
+            <li>· Tests de movimiento, fuerza y sensibilidad.</li>
+          </ul>
+        </article>
+
+        <!-- Paso 2 -->
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 space-y-3 transition-all duration-300 hover:border-sky-400/60 hover:-translate-y-1"
+          data-animate="up"
+        >
+          <div class="space-y-1">
+            <h3 class="font-semibold text-sm sm:text-base">
+              Tratamiento y ejercicio
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300">
+              Combinamos técnicas manuales y ejercicio terapéutico adaptado a ti,
+              explicando siempre el porqué de cada cosa que hacemos.
+            </p>
+          </div>
+
+          <ul class="text-[11px] text-slate-400 space-y-1">
+            <li>· Trabajo en camilla cuando es necesario.</li>
+            <li>· Ejercicios que podrás continuar en casa o en el gimnasio.</li>
+          </ul>
+        </article>
+
+        <!-- Paso 3 -->
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 space-y-3 transition-all duration-300 hover:border-purple-400/60 hover:-translate-y-1"
+          data-animate="right"
+        >
+          <div class="space-y-1">
+            <h3 class="font-semibold text-sm sm:text-base">
+              Plan y seguimiento
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300">
+              Definimos cuántas sesiones pueden ser necesarias, qué puedes hacer entre visitas
+              y cómo sabremos que estás mejorando.
+            </p>
+          </div>
+
+          <ul class="text-[11px] text-slate-400 space-y-1">
+            <li>· Revisión periódica de objetivos y evolución.</li>
+            <li>· Estrategias para que sepas qué hacer si el dolor vuelve.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- CASOS FRECUENTES -->
+    <section class="space-y-8" aria-labelledby="casos-frecuentes-title">
+      <header class="space-y-2" data-animate="up">
+        <h2
+          id="casos-frecuentes-title"
+          class="text-2xl sm:text-3xl font-semibold tracking-tight"
+        >
+          Casos que vemos muy a menudo en la clínica
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl">
+          Si te reconoces en alguno de estos ejemplos, es probable que podamos ayudarte.
+          Aun así, cada persona es diferente y valoramos cada caso de forma individual.
+        </p>
+      </header>
+
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 text-xs sm:text-sm">
+        <div
+          class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-1.5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/60 hover:shadow-[0_0_10px_rgba(16,185,129,0.3)]"
+          data-animate="left"
+        >
+          <p class="font-medium text-slate-100 flex items-center gap-2">
+            <span>🧑‍💻</span>
+            Dolor cervical por trabajo de oficina
+          </p>
+          <p class="text-slate-400">
+            Molestias en cuello y hombros tras muchas horas frente al ordenador.
+          </p>
+        </div>
+
+        <div
+          class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-1.5 transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/60 hover:shadow-[0_0_10px_rgba(56,189,248,0.3)]"
+          data-animate="up"
+        >
+          <p class="font-medium text-slate-100 flex items-center gap-2">
+            <span>🏃</span>
+            Dolor de rodilla en corredores
+          </p>
+          <p class="text-slate-400">
+            Molestia al aumentar kilómetros, en bajadas o tras competir.
+          </p>
+        </div>
+
+        <div
+          class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-1.5 transition-all duration-300 hover:-translate-y-1 hover:border-purple-400/60 hover:shadow-[0_0_10px_rgba(192,132,252,0.3)]"
+          data-animate="right"
+        >
+          <p class="font-medium text-slate-100 flex items-center gap-2">
+            <span>🦶</span>
+            Fascitis plantar y dolor en talón
+          </p>
+          <p class="text-slate-400">
+            Dolor con los primeros pasos del día o al estar mucho tiempo de pie.
+          </p>
+        </div>
+
+        <div
+          class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-1.5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/60 hover:shadow-[0_0_10px_rgba(16,185,129,0.3)]"
+          data-animate="left"
+        >
+          <p class="font-medium text-slate-100 flex items-center gap-2">
+            <span>⚽</span>
+            Esguinces de tobillo recurrentes
+          </p>
+          <p class="text-slate-400">
+            Inestabilidad y miedo al girar o cambiar de dirección en deporte.
+          </p>
+        </div>
+
+        <div
+          class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-1.5 transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/60 hover:shadow-[0_0_10px_rgba(56,189,248,0.3)]"
+          data-animate="up"
+        >
+          <p class="font-medium text-slate-100 flex items-center gap-2">
+            <span>🧠</span>
+            Dolor persistente de larga evolución
+          </p>
+          <p class="text-slate-400">
+            Dolor que lleva meses o años y afecta al trabajo, al descanso o al deporte.
+          </p>
+        </div>
+
+        <div
+          class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-1.5 transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/60 hover:shadow-[0_0_10px_rgba(251,191,36,0.3)]"
+          data-animate="right"
+        >
+          <p class="font-medium text-slate-100 flex items-center gap-2">
+            <span>🤱</span>
+            Dolor lumbar tras esfuerzos o cargas
+          </p>
+          <p class="text-slate-400">
+            Molestias en la zona lumbar asociadas a coger peso, trabajos físicos o tareas del día a día.
+          </p>
+        </div>
+      </div>
+
+      <p class="text-[11px] sm:text-xs text-slate-500" data-animate="up">
+        * Esta página tiene un fin informativo. No sustituye la valoración individual.
+        Para saber qué es lo más adecuado en tu caso concreto, es necesaria una consulta presencial.
+      </p>
+    </section>
+
+    <!-- Semilla clases para Tailwind -->
+    <div class="hidden opacity-0 opacity-100 -translate-x-10 translate-x-10 translate-y-10 translate-x-0 translate-y-0"></div>
+  </main>
+
+  <!-- Script: menú hamburguesa + animaciones scroll -->
+  <script>
+    // Menú móvil
+    const toggle = document.querySelector("[data-menu-toggle]");
+    const menu = document.querySelector("[data-menu]");
+    const items = document.querySelectorAll("[data-menu-item]");
+
+    if (toggle && menu) {
+      const closeMenu = () => {
+        menu.hidden = true;
+        toggle.setAttribute("aria-expanded", "false");
+      };
+
+      const openMenu = () => {
+        menu.hidden = false;
+        toggle.setAttribute("aria-expanded", "true");
+      };
+
+      toggle.addEventListener("click", () => {
+        const isOpen = toggle.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      items.forEach((item) => {
+        item.addEventListener("click", () => {
+          closeMenu();
+        });
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+          closeMenu();
+        }
+      });
+    }
+
+    // Animaciones al hacer scroll
+    const animatedEls = document.querySelectorAll("[data-animate]");
+
+    const applyHiddenState = (el) => {
+      const dir = el.getAttribute("data-animate") || "up";
+
+      el.classList.add("transition-all", "duration-700", "ease-out", "will-change-transform", "will-change-opacity");
+
+      el.classList.remove(
+        "opacity-100",
+        "translate-x-0",
+        "translate-y-0",
+        "-translate-x-10",
+        "translate-x-10",
+        "translate-y-10"
+      );
+
+      el.classList.add("opacity-0");
+
+      if (dir === "left") {
+        el.classList.add("-translate-x-10");
+      } else if (dir === "right") {
+        el.classList.add("translate-x-10");
+      } else {
+        el.classList.add("translate-y-10");
+      }
+    };
+
+    const applyVisibleState = (el) => {
+      const dir = el.getAttribute("data-animate") || "up";
+
+      el.classList.remove("opacity-0", "-translate-x-10", "translate-x-10", "translate-y-10");
+      el.classList.add("opacity-100");
+
+      if (dir === "left" || dir === "right") {
+        el.classList.add("translate-x-0");
+      } else {
+        el.classList.add("translate-y-0");
+      }
+    };
+
+    if (animatedEls.length > 0 && "IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const el = entry.target;
+            if (entry.isIntersecting) {
+              applyVisibleState(el);
+            } else {
+              applyHiddenState(el);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      animatedEls.forEach((el) => {
+        applyHiddenState(el);
+        observer.observe(el);
+      });
+    }
+  </script>
+</BaseLayout>

@@ -1,0 +1,474 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Equipo · FisioClinic"
+  description="Conoce al profesional que estará contigo en tu proceso de recuperación en FisioClinic: formación, experiencia y enfoque de trabajo."
+>
+  <!-- HEADER / NAVBAR -->
+  <header class="sticky top-0 z-30 border-b border-white/5 bg-slate-950/80 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <!-- Logo / Nombre clínica -->
+      <a href="/" class="inline-flex items-center gap-2 shrink-0">
+        <div class="h-9 w-9 rounded-2xl bg-emerald-500/15 border border-emerald-400/60 flex items-center justify-center text-emerald-300 text-xl">
+          🏥
+        </div>
+        <div class="flex flex-col leading-tight">
+          <span class="font-semibold text-sm sm:text-base">
+            FisioMarcosGarcía
+          </span>
+          <span class="text-[11px] sm:text-xs text-slate-400">
+            Clínica de fisioterapia
+          </span>
+        </div>
+      </a>
+
+      <!-- Navegación escritorio / tablet -->
+      <nav
+        class="hidden md:flex items-center gap-6 text-sm"
+        aria-label="Navegación principal"
+      >
+        <a href="/" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Inicio
+        </a>
+        <a href="/servicios" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Servicios
+        </a>
+        <a href="/centro" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Cómo trabajamos
+        </a>
+        <a href="/equipo" class="text-emerald-300">
+          Equipo
+        </a>
+        <a href="/contacto" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Contacto
+        </a>
+      </nav>
+
+      <!-- Botón hamburguesa solo en móvil -->
+      <button
+        type="button"
+        class="md:hidden inline-flex items-center justify-center rounded-full border border-slate-700/80 px-3 py-2 text-xs font-medium text-slate-200 hover:bg-slate-900/70 hover:border-slate-500 transition-colors"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        data-menu-toggle
+      >
+        <span class="mr-2">Menú</span>
+        <span class="relative flex h-3 w-3">
+          <span
+            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-40"
+          ></span>
+          <span
+            class="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"
+          ></span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Menú desplegable móvil -->
+    <div
+      class="md:hidden border-t border-white/5 bg-slate-950/95 backdrop-blur-sm"
+      data-menu
+      hidden
+    >
+      <nav
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-2 text-sm"
+        aria-label="Navegación móvil"
+      >
+        <a
+          href="/"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Inicio
+        </a>
+        <a
+          href="/servicios"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Servicios
+        </a>
+        <a
+          href="/centro"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Cómo trabajamos
+        </a>
+        <a
+          href="/equipo"
+          class="py-1 text-emerald-300"
+          data-menu-item
+        >
+          Equipo
+        </a>
+        <a
+          href="/contacto"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Contacto
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN EQUIPO -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 space-y-16">
+    <!-- HERO / PRESENTACIÓN -->
+    <section class="space-y-8">
+      <div class="space-y-4 max-w-3xl" data-animate="left">
+        <p class="text-xs font-medium tracking-[0.22em] text-emerald-400 uppercase">
+          Equipo
+        </p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
+          Una persona de referencia para todo tu proceso
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base">
+          Queremos que sepas quién va a estar al otro lado de la camilla, de la llamada
+          y del seguimiento. Un profesional de confianza, accesible y con formación
+          actualizada en fisioterapia y dolor.
+        </p>
+      </div>
+    </section>
+
+    <!-- PERFIL PRINCIPAL -->
+    <section class="space-y-10" aria-labelledby="perfil-title">
+      <div
+        class="grid gap-8 lg:grid-cols-[minmax(0,0.95fr),minmax(0,1.05fr)] items-start"
+      >
+        <!-- Foto + datos básicos -->
+        <article
+          class="relative rounded-3xl border border-white/10 bg-slate-900/70 p-6 sm:p-7 flex flex-col items-center gap-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/60 hover:shadow-[0_0_22px_rgba(16,185,129,0.35)]"
+          data-animate="left"
+        >
+          <div class="absolute -top-6 -left-6 h-20 w-20 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none"></div>
+          <div class="absolute -bottom-8 -right-4 h-24 w-24 rounded-full bg-sky-500/10 blur-3xl pointer-events-none"></div>
+
+          <div class="relative">
+            <div class="h-32 w-32 sm:h-36 sm:w-36 rounded-full border-2 border-emerald-400/70 overflow-hidden shadow-lg shadow-emerald-500/30">
+              <img
+                src="https://images.pexels.com/photos/8442284/pexels-photo-8442284.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Fisioterapeuta en la clínica"
+                class="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="space-y-1.5">
+            <h2
+              id="perfil-title"
+              class="text-xl sm:text-2xl font-semibold tracking-tight"
+            >
+              Javier Martín López
+            </h2>
+            <p class="text-xs sm:text-sm text-emerald-300 font-medium">
+              Fisioterapeuta · Especialista en dolor musculoesquelético y rehabilitación
+            </p>
+          </div>
+
+          <div class="grid gap-3 text-[11px] sm:text-xs text-slate-300 w-full max-w-xs sm:max-w-sm">
+            <div class="flex items-center justify-between gap-3">
+              <span class="text-slate-400">Colegiado nº</span>
+              <span class="font-medium text-slate-100">XXXX · Colegio Oficial</span>
+            </div>
+            <div class="flex items-center justify-between gap-3">
+              <span class="text-slate-400">Experiencia clínica</span>
+              <span class="font-medium text-slate-100">+8 años</span>
+            </div>
+            <div class="flex items-center justify-between gap-3">
+              <span class="text-slate-400">Áreas principales</span>
+              <span class="font-medium text-slate-100 text-right">
+                Columna · Deporte · Dolor persistente
+              </span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap justify-center gap-2 pt-2 text-[11px] sm:text-xs">
+            <span class="rounded-full border border-emerald-400/60 bg-emerald-500/10 px-3 py-1 text-emerald-100">
+              Enfoque basado en evidencia
+            </span>
+            <span class="rounded-full border border-sky-400/60 bg-sky-500/10 px-3 py-1 text-sky-100">
+              Comunicación clara
+            </span>
+            <span class="rounded-full border border-purple-400/60 bg-purple-500/10 px-3 py-1 text-purple-100">
+              Acompañamiento realista
+            </span>
+          </div>
+        </article>
+
+        <!-- Formación + experiencia -->
+        <div class="space-y-8 text-xs sm:text-sm">
+          <!-- Formación -->
+          <section
+            class="rounded-3xl border border-white/10 bg-slate-900/70 p-5 sm:p-6 space-y-3 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/50 hover:shadow-[0_0_16px_rgba(16,185,129,0.3)]"
+            data-animate="up"
+          >
+            <header class="space-y-1">
+              <p class="text-[11px] font-medium tracking-[0.22em] text-emerald-300 uppercase">
+                Formación
+              </p>
+              <h3 class="text-sm sm:text-base font-semibold text-slate-50">
+                Base sólida en fisioterapia y actualización constante
+              </h3>
+            </header>
+
+            <ul class="space-y-1.5 text-slate-300">
+              <li>
+                · Grado en Fisioterapia · Universidad (año orientativo).
+              </li>
+              <li>
+                · Máster / formación avanzada en terapia manual y ejercicio terapéutico.
+              </li>
+              <li>
+                · Cursos específicos en dolor musculoesquelético y neurociencia del dolor.
+              </li>
+              <li>
+                · Formación continua en rehabilitación de lesiones deportivas.
+              </li>
+            </ul>
+
+            <p class="text-[11px] text-slate-400 pt-1">
+              La formación se actualiza de forma periódica para trabajar con criterios alineados
+              con la evidencia científica más reciente.
+            </p>
+          </section>
+
+          <!-- Experiencia -->
+          <section
+            class="rounded-3xl border border-white/10 bg-slate-900/70 p-5 sm:p-6 space-y-3 transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/50 hover:shadow-[0_0_16px_rgba(56,189,248,0.3)]"
+            data-animate="right"
+          >
+            <header class="space-y-1">
+              <p class="text-[11px] font-medium tracking-[0.22em] text-sky-300 uppercase">
+                Experiencia
+              </p>
+              <h3 class="text-sm sm:text-base font-semibold text-slate-50">
+                Trabajo clínico orientado a la vida real de cada paciente
+              </h3>
+            </header>
+
+            <ul class="space-y-1.5 text-slate-300">
+              <li>
+                · Experiencia en clínica privada atendiendo a pacientes con dolor de espalda,
+                cuello y lesiones deportivas.
+              </li>
+              <li>
+                · Trabajo con personas activas que quieren volver a entrenar sin miedo al dolor.
+              </li>
+              <li>
+                · Acompañamiento en procesos largos, como dolor persistente o rehabilitación
+                postquirúrgica.
+              </li>
+              <li>
+                · Coordinación con médicos, entrenadores y otros profesionales cuando es necesario.
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENFOQUE DE TRABAJO PERSONAL -->
+    <section class="space-y-8" aria-labelledby="enfoque-title">
+      <header class="space-y-2 max-w-3xl" data-animate="up">
+        <h2
+          id="enfoque-title"
+          class="text-2xl sm:text-3xl font-semibold tracking-tight"
+        >
+          Un enfoque centrado en ti, no solo en la lesión
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base">
+          Más allá de la estructura que duele, nos importa cómo afecta el problema a tu día a día:
+          trabajo, deporte, descanso, familia. El objetivo es que todo eso mejore, no solo una prueba
+          de fuerza o de movilidad.
+        </p>
+      </header>
+
+      <div class="grid gap-6 md:grid-cols-3 text-xs sm:text-sm">
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/70 p-5 sm:p-6 space-y-2.5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/60 hover:shadow-[0_0_14px_rgba(16,185,129,0.3)]"
+          data-animate="left"
+        >
+          <p class="font-medium text-slate-100 flex items-center gap-2">
+            <span>🧠</span>
+            Explicación comprensible
+          </p>
+          <p class="text-slate-300">
+            Evitamos tecnicismos innecesarios. Entender qué te pasa y por qué duele es parte
+            del tratamiento, no solo “información extra”.
+          </p>
+        </article>
+
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/70 p-5 sm:p-6 space-y-2.5 transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/60 hover:shadow-[0_0_14px_rgba(56,189,248,0.3)]"
+          data-animate="up"
+        >
+          <p class="font-medium text-slate-100 flex items-center gap-2">
+            <span>🏋️</span>
+            Movimiento y confianza
+          </p>
+          <p class="text-slate-300">
+            El ejercicio y la exposición progresiva al movimiento son claves. Buscamos que
+            recuperes la confianza en tu cuerpo poco a poco.
+          </p>
+        </article>
+
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/70 p-5 sm:p-6 space-y-2.5 transition-all duration-300 hover:-translate-y-1 hover:border-purple-400/60 hover:shadow-[0_0_14px_rgba(192,132,252,0.3)]"
+          data-animate="right"
+        >
+          <p class="font-medium text-slate-100 flex items-center gap-2">
+            <span>🤝</span>
+            Decisiones compartidas
+          </p>
+          <p class="text-slate-300">
+            Las decisiones sobre tu tratamiento se toman contigo: explicando opciones,
+            tiempos posibles y qué podemos esperar en cada fase.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- MINI BLOQUE CTA INFORMAL -->
+    <section class="space-y-4" aria-labelledby="cta-equipo-title">
+      <div
+        class="rounded-3xl border border-emerald-400/40 bg-emerald-500/5 p-5 sm:p-6 text-xs sm:text-sm space-y-2.5 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_18px_rgba(16,185,129,0.35)]"
+        data-animate="up"
+      >
+        <h2
+          id="cta-equipo-title"
+          class="text-sm sm:text-base font-semibold text-slate-50 flex items-center gap-2"
+        >
+          <span>¿Te ves trabajando con nosotros?</span>
+        </h2>
+        <p class="text-emerald-50">
+          Si después de leer esto crees que este enfoque encaja contigo, puedes escribirnos o
+          llamarnos y vemos juntos cuál sería el mejor punto de partida para tu caso.
+        </p>
+        <p class="text-[11px] text-emerald-100/80">
+          No hay compromiso en el primer contacto: puedes simplemente preguntar y valorar
+          si es el momento adecuado para empezar.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-1 text-[11px] sm:text-xs text-emerald-100/90">
+          <a
+            href="/contacto"
+            class="inline-flex items-center gap-2 rounded-full border border-emerald-400/70 bg-emerald-500/10 px-4 py-1.5 font-medium hover:bg-emerald-500/20 transition-colors"
+          >
+            Ir a la página de contacto
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Semilla para que Tailwind no purgue clases de animación -->
+    <div class="hidden opacity-0 opacity-100 -translate-x-10 translate-x-10 translate-y-10 translate-x-0 translate-y-0"></div>
+  </main>
+
+  <!-- Script: menú hamburguesa + animaciones scroll -->
+  <script>
+    // Menú móvil
+    const toggle = document.querySelector("[data-menu-toggle]");
+    const menu = document.querySelector("[data-menu]");
+    const items = document.querySelectorAll("[data-menu-item]");
+
+    if (toggle && menu) {
+      const closeMenu = () => {
+        menu.hidden = true;
+        toggle.setAttribute("aria-expanded", "false");
+      };
+
+      const openMenu = () => {
+        menu.hidden = false;
+        toggle.setAttribute("aria-expanded", "true");
+      };
+
+      toggle.addEventListener("click", () => {
+        const isOpen = toggle.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      items.forEach((item) => {
+        item.addEventListener("click", () => {
+          closeMenu();
+        });
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+          closeMenu();
+        }
+      });
+    }
+
+    // Animaciones al hacer scroll
+    const animatedEls = document.querySelectorAll("[data-animate]");
+
+    const applyHiddenState = (el) => {
+      const dir = el.getAttribute("data-animate") || "up";
+
+      el.classList.add("transition-all", "duration-700", "ease-out", "will-change-transform", "will-change-opacity");
+
+      el.classList.remove(
+        "opacity-100",
+        "translate-x-0",
+        "translate-y-0",
+        "-translate-x-10",
+        "translate-x-10",
+        "translate-y-10"
+      );
+
+      el.classList.add("opacity-0");
+
+      if (dir === "left") {
+        el.classList.add("-translate-x-10");
+      } else if (dir === "right") {
+        el.classList.add("translate-x-10");
+      } else {
+        el.classList.add("translate-y-10");
+      }
+    };
+
+    const applyVisibleState = (el) => {
+      const dir = el.getAttribute("data-animate") || "up";
+
+      el.classList.remove("opacity-0", "-translate-x-10", "translate-x-10", "translate-y-10");
+      el.classList.add("opacity-100");
+
+      if (dir === "left" || dir === "right") {
+        el.classList.add("translate-x-0");
+      } else {
+        el.classList.add("translate-y-0");
+      }
+    };
+
+    if (animatedEls.length > 0 && "IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const el = entry.target;
+            if (entry.isIntersecting) {
+              applyVisibleState(el);
+            } else {
+              applyHiddenState(el);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      animatedEls.forEach((el) => {
+        applyHiddenState(el);
+        observer.observe(el);
+      });
+    }
+  </script>
+</BaseLayout>

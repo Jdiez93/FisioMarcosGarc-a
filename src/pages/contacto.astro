@@ -1,0 +1,483 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Contacto · FisioClinic"
+  description="Información de contacto de FisioClinic: teléfono, WhatsApp y correo electrónico para resolver dudas y solicitar cita de fisioterapia."
+>
+  <!-- HEADER / NAVBAR -->
+  <header class="sticky top-0 z-30 border-b border-white/5 bg-slate-950/80 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <!-- Logo / Nombre clínica -->
+      <a href="/" class="inline-flex items-center gap-2 shrink-0">
+        <div class="h-9 w-9 rounded-2xl bg-emerald-500/15 border border-emerald-400/60 flex items-center justify-center text-emerald-300 text-xl">
+          🏥
+        </div>
+        <div class="flex flex-col leading-tight">
+          <span class="font-semibold text-sm sm:text-base">
+            FisioMarcosGarcía
+          </span>
+          <span class="text-[11px] sm:text-xs text-slate-400">
+            Clínica de fisioterapia
+          </span>
+        </div>
+      </a>
+
+      <!-- Navegación escritorio / tablet -->
+      <nav
+        class="hidden md:flex items-center gap-6 text-sm"
+        aria-label="Navegación principal"
+      >
+        <a href="/" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Inicio
+        </a>
+        <a href="/servicios" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Servicios
+        </a>
+        <a href="/centro" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Cómo trabajamos
+        </a>
+        <a href="/equipo" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Equipo
+        </a>
+        <a href="/contacto" class="text-emerald-300">
+          Contacto
+        </a>
+      </nav>
+
+      <!-- Botón hamburguesa solo en móvil -->
+      <button
+        type="button"
+        class="md:hidden inline-flex items-center justify-center rounded-full border border-slate-700/80 px-3 py-2 text-xs font-medium text-slate-200 hover:bg-slate-900/70 hover:border-slate-500 transition-colors"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        data-menu-toggle
+      >
+        <span class="mr-2">Menú</span>
+        <span class="relative flex h-3 w-3">
+          <span
+            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-40"
+          ></span>
+          <span
+            class="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"
+          ></span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Menú desplegable móvil -->
+    <div
+      class="md:hidden border-t border-white/5 bg-slate-950/95 backdrop-blur-sm"
+      data-menu
+      hidden
+    >
+      <nav
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-2 text-sm"
+        aria-label="Navegación móvil"
+      >
+        <a
+          href="/"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Inicio
+        </a>
+        <a
+          href="/servicios"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Servicios
+        </a>
+        <a
+          href="/centro"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Cómo trabajamos
+        </a>
+        <a
+          href="/equipo"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Equipo
+        </a>
+        <a
+          href="/contacto"
+          class="py-1 text-emerald-300"
+          data-menu-item
+        >
+          Contacto
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTACTO -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 space-y-16">
+    <!-- HERO CONTACTO -->
+    <section class="space-y-6">
+      <div class="space-y-4 max-w-3xl" data-animate="left">
+        <p class="text-xs font-medium tracking-[0.22em] text-emerald-400 uppercase">
+          Contacto y reservas
+        </p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
+          Hablemos sobre lo que te pasa
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base">
+          Si tienes dudas, quieres saber si podemos ayudarte o deseas reservar una sesión,
+          puedes contactar con nosotros por teléfono, WhatsApp o correo electrónico.
+          No realizamos reservas ni pagos online desde esta web.
+        </p>
+      </div>
+
+      <div
+        class="rounded-3xl border border-emerald-400/40 bg-emerald-500/5 p-4 sm:p-5 text-xs sm:text-sm text-emerald-50 max-w-2xl"
+        data-animate="up"
+      >
+        <p class="font-medium">
+          La primera llamada o mensaje es informativa.
+        </p>
+        <p class="mt-1 text-emerald-100/90">
+          Cuéntanos brevemente qué te ocurre y te orientaremos sobre el tipo de tratamiento
+          más adecuado y la duración aproximada del proceso.
+        </p>
+      </div>
+    </section>
+
+    <!-- FORMAS DE CONTACTO -->
+    <section class="space-y-6" aria-labelledby="formas-contacto-title">
+      <header class="space-y-2" data-animate="up">
+        <h2
+          id="formas-contacto-title"
+          class="text-2xl sm:text-3xl font-semibold tracking-tight"
+        >
+          Formas de contacto
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl">
+          Elige la forma que te resulte más cómoda. Intentamos responder siempre
+          lo antes posible dentro del horario de la clínica.
+        </p>
+      </header>
+
+      <div class="grid gap-8 md:grid-cols-3">
+        <!-- Teléfono -->
+        <a
+          href="tel:+34123456789"
+          class="group rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 flex flex-col gap-3 transition-all duration-300 hover:border-emerald-400/60 hover:-translate-y-1 hover:shadow-[0_0_16px_rgba(16,185,129,0.25)]"
+          data-animate="left"
+        >
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-2xl bg-emerald-500/15 border border-emerald-400/60 flex items-center justify-center text-xl">
+              📞
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-[0.18em] text-emerald-300">
+                Teléfono
+              </p>
+              <p class="text-sm sm:text-base font-semibold text-slate-50">
+                +34 123 456 789
+              </p>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300">
+            Ideal si quieres explicarnos tu caso con más detalle o resolver dudas rápidas.
+          </p>
+          <p class="mt-auto text-[11px] text-slate-400">
+            Si en ese momento estamos en sesión, te devolveremos la llamada en cuanto podamos.
+          </p>
+        </a>
+
+        <!-- WhatsApp -->
+        <a
+          href="https://wa.me/34123456789"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 flex flex-col gap-3 transition-all duration-300 hover:border-emerald-400/60 hover:-translate-y-1 hover:shadow-[0_0_16px_rgba(16,185,129,0.25)]"
+          data-animate="up"
+        >
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-2xl bg-emerald-500/15 border border-emerald-400/60 flex items-center justify-center text-xl">
+              💬
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-[0.18em] text-emerald-300">
+                WhatsApp
+              </p>
+              <p class="text-sm sm:text-base font-semibold text-slate-50">
+                Mensajes y cambios de cita
+              </p>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300">
+            Escríbenos para consultas breves, cambios de horario o dudas sobre el seguimiento
+            de tu tratamiento.
+          </p>
+          <p class="mt-auto text-[11px] text-slate-400">
+            No siempre respondemos al instante, pero dejamos constancia de tu mensaje
+            y te responderemos dentro del horario de la clínica.
+          </p>
+        </a>
+
+        <!-- Email -->
+        <a
+          href="mailto:info@fisioclinic.es"
+          class="group rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 flex flex-col gap-3 transition-all duration-300 hover:border-emerald-400/60 hover:-translate-y-1 hover:shadow-[0_0_16px_rgba(16,185,129,0.25)]"
+          data-animate="right"
+        >
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-2xl bg-sky-500/15 border border-sky-400/60 flex items-center justify-center text-xl">
+              ✉️
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-[0.18em] text-sky-300">
+                Email
+              </p>
+              <p class="text-sm sm:text-base font-semibold text-slate-50">
+                info@fisioclinic.es
+              </p>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300">
+            Útil si quieres enviarnos informes, pruebas médicas o explicarnos tu caso con calma.
+          </p>
+          <p class="mt-auto text-[11px] text-slate-400">
+            Intentamos responder los correos en un plazo razonable dentro de nuestro horario laboral.
+          </p>
+        </a>
+      </div>
+    </section>
+
+    <!-- HORARIO Y UBICACIÓN -->
+    <section class="space-y-8" aria-labelledby="horario-ubicacion-title">
+      <header class="space-y-2" data-animate="up">
+        <h2
+          id="horario-ubicacion-title"
+          class="text-2xl sm:text-3xl font-semibold tracking-tight"
+        >
+          Horario y ubicación
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl">
+          Antes de llamarnos, puede venirte bien echar un vistazo a nuestro horario y ubicación
+          aproximados. Así podrás valorar qué franja te encaja mejor.
+        </p>
+      </header>
+
+      <div class="grid gap-6 lg:grid-cols-[0.9fr,1.1fr] items-start">
+        <!-- Horario y detalles -->
+        <div class="space-y-4">
+          <div
+            class="rounded-3xl border border-white/10 bg-slate-900/70 p-5 sm:p-6 text-sm space-y-3 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/60 hover:shadow-[0_0_14px_rgba(16,185,129,0.3)]"
+            data-animate="left"
+          >
+            <div>
+              <p class="text-xs font-medium tracking-[0.22em] text-emerald-400 uppercase">
+                Horario orientativo
+              </p>
+              <ul class="mt-2 text-slate-200 space-y-1">
+                <li>Lunes a viernes: 09:00 – 14:00 y 16:00 – 20:00</li>
+                <li>Sábados: bajo cita previa</li>
+              </ul>
+            </div>
+            <p class="text-xs text-slate-400">
+              Si necesitas un horario especial (muy temprano o a última hora),
+              coméntanoslo por teléfono o WhatsApp e intentaremos adaptarnos.
+            </p>
+          </div>
+
+          <div
+            class="rounded-3xl border border-white/10 bg-slate-900/70 p-5 sm:p-6 text-sm space-y-2 transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/60 hover:shadow-[0_0_14px_rgba(56,189,248,0.3)]"
+            data-animate="up"
+          >
+            <p class="text-xs font-medium tracking-[0.22em] text-slate-400 uppercase">
+              Dirección orientativa
+            </p>
+            <p class="text-slate-200">
+              Calle Ejemplo 123, 1ºB<br />
+              28229 · Villanueva del Pardillo (Madrid)
+            </p>
+            <p class="text-xs text-slate-400">
+              Zona con fácil aparcamiento y acceso en transporte público.
+              Cuando reserves tu cita te confirmaremos la dirección exacta si fuera necesario.
+            </p>
+          </div>
+        </div>
+
+        <!-- Mapa Villanueva del Pardillo -->
+        <div
+          class="rounded-3xl border border-white/10 bg-slate-900/60 overflow-hidden h-64 sm:h-80 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/60 hover:shadow-[0_0_18px_rgba(16,185,129,0.35)]"
+          data-animate="right"
+        >
+          <iframe
+            class="w-full h-full"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3090.225963495041!2d-3.996995984641448!3d40.49148757935605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd421f4c14f28c5d%3A0x6c5131c1e099f399!2sVillanueva%20del%20Pardillo%2C%2028229%20Madrid!5e0!3m2!1ses!2ses!4v1700000000000"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO ÚTIL ANTES DE LLAMAR -->
+    <section class="space-y-6" aria-labelledby="info-util-title">
+      <header class="space-y-2" data-animate="up">
+        <h2
+          id="info-util-title"
+          class="text-2xl sm:text-3xl font-semibold tracking-tight"
+        >
+          Información útil antes de contactar
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl">
+          No es obligatorio, pero si tienes a mano algunos datos, podremos ayudarte
+          mucho mejor desde el primer contacto.
+        </p>
+      </header>
+
+      <div class="grid gap-8 md:grid-cols-2 text-xs sm:text-sm">
+        <div
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 space-y-2.5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/60 hover:shadow-[0_0_14px_rgba(16,185,129,0.3)]"
+          data-animate="left"
+        >
+          <p class="font-medium text-slate-100 flex items-center gap-2">
+            <span>📄</span>
+            Qué nos ayuda a saber
+          </p>
+          <ul class="text-slate-300 space-y-1.5">
+            <li>· Desde cuándo tienes el dolor o la molestia.</li>
+            <li>· Si ha habido una lesión concreta (golpe, caída, esguince…).</li>
+            <li>· Si tienes pruebas médicas (radiografías, resonancias, informes…).</li>
+            <li>· Qué actividades te cuesta más hacer por culpa del dolor.</li>
+          </ul>
+        </div>
+
+        <div
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 space-y-2.5 transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/60 hover:shadow-[0_0_14px_rgba(56,189,248,0.3)]"
+          data-animate="right"
+        >
+          <p class="font-medium text-slate-100 flex items-center gap-2">
+            <span>ℹ️</span>
+            Sobre reservas y cancelaciones
+          </p>
+          <ul class="text-slate-300 space-y-1.5">
+            <li>· Las citas se confirman siempre por teléfono o mensaje directo.</li>
+            <li>· Puedes cancelar o cambiar tu sesión avisando con antelación razonable.</li>
+            <li>· De momento no realizamos pagos ni reservas online desde esta web.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="text-[11px] sm:text-xs text-slate-500" data-animate="up">
+        * La información de esta página es orientativa. Las condiciones concretas de reservas,
+        cancelaciones y tarifas se explicarán siempre de forma clara en el momento de confirmar tu cita.
+      </p>
+    </section>
+
+    <!-- Semilla para que Tailwind no purgue clases de animación -->
+    <div class="hidden opacity-0 opacity-100 -translate-x-10 translate-x-10 translate-y-10 translate-x-0 translate-y-0"></div>
+  </main>
+
+  <!-- Script: menú hamburguesa + animaciones scroll -->
+  <script>
+    // Menú móvil
+    const toggle = document.querySelector("[data-menu-toggle]");
+    const menu = document.querySelector("[data-menu]");
+    const items = document.querySelectorAll("[data-menu-item]");
+
+    if (toggle && menu) {
+      const closeMenu = () => {
+        menu.hidden = true;
+        toggle.setAttribute("aria-expanded", "false");
+      };
+
+      const openMenu = () => {
+        menu.hidden = false;
+        toggle.setAttribute("aria-expanded", "true");
+      };
+
+      toggle.addEventListener("click", () => {
+        const isOpen = toggle.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      items.forEach((item) => {
+        item.addEventListener("click", () => {
+          closeMenu();
+        });
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+          closeMenu();
+        }
+      });
+    }
+
+    // Animaciones al hacer scroll
+    const animatedEls = document.querySelectorAll("[data-animate]");
+
+    const applyHiddenState = (el) => {
+      const dir = el.getAttribute("data-animate") || "up";
+
+      el.classList.add("transition-all", "duration-700", "ease-out", "will-change-transform", "will-change-opacity");
+
+      el.classList.remove(
+        "opacity-100",
+        "translate-x-0",
+        "translate-y-0",
+        "-translate-x-10",
+        "translate-x-10",
+        "translate-y-10"
+      );
+
+      el.classList.add("opacity-0");
+
+      if (dir === "left") {
+        el.classList.add("-translate-x-10");
+      } else if (dir === "right") {
+        el.classList.add("translate-x-10");
+      } else {
+        el.classList.add("translate-y-10");
+      }
+    };
+
+    const applyVisibleState = (el) => {
+      const dir = el.getAttribute("data-animate") || "up";
+
+      el.classList.remove("opacity-0", "-translate-x-10", "translate-x-10", "translate-y-10");
+      el.classList.add("opacity-100");
+
+      if (dir === "left" || dir === "right") {
+        el.classList.add("translate-x-0");
+      } else {
+        el.classList.add("translate-y-0");
+      }
+    };
+
+    if (animatedEls.length > 0 && "IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const el = entry.target;
+            if (entry.isIntersecting) {
+              applyVisibleState(el);
+            } else {
+              applyHiddenState(el);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      animatedEls.forEach((el) => {
+        applyHiddenState(el);
+        observer.observe(el);
+      });
+    }
+  </script>
+</BaseLayout>

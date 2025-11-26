@@ -1,0 +1,609 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Cómo trabajamos · FisioClinic"
+  description="Conoce cómo trabajamos en FisioClinic: desde el primer contacto hasta el seguimiento, pasando por la primera sesión y el uso de nuestro centro y material."
+>
+  <!-- HEADER / NAVBAR -->
+  <header class="sticky top-0 z-30 border-b border-white/5 bg-slate-950/80 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <!-- Logo / Nombre clínica -->
+      <a href="/" class="inline-flex items-center gap-2 shrink-0">
+        <div class="h-9 w-9 rounded-2xl bg-emerald-500/15 border border-emerald-400/60 flex items-center justify-center text-emerald-300 text-xl">
+          🏥
+        </div>
+        <div class="flex flex-col leading-tight">
+          <span class="font-semibold text-sm sm:text-base">
+            FisioMarcosGarcía
+          </span>
+          <span class="text-[11px] sm:text-xs text-slate-400">
+            Clínica de fisioterapia
+          </span>
+        </div>
+      </a>
+
+      <!-- Navegación escritorio / tablet -->
+      <nav
+        class="hidden md:flex items-center gap-6 text-sm"
+        aria-label="Navegación principal"
+      >
+        <a href="/" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Inicio
+        </a>
+        <a href="/servicios" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Servicios
+        </a>
+        <a href="/centro" class="text-emerald-300">
+          Cómo trabajamos
+        </a>
+        <a href="/equipo" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Equipo
+        </a>
+        <a href="/contacto" class="text-slate-300 hover:text-emerald-300 transition-colors">
+          Contacto
+        </a>
+      </nav>
+
+      <!-- Botón hamburguesa solo en móvil -->
+      <button
+        type="button"
+        class="md:hidden inline-flex items-center justify-center rounded-full border border-slate-700/80 px-3 py-2 text-xs font-medium text-slate-200 hover:bg-slate-900/70 hover:border-slate-500 transition-colors"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        data-menu-toggle
+      >
+        <span class="mr-2">Menú</span>
+        <span class="relative flex h-3 w-3">
+          <span
+            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-40"
+          ></span>
+          <span
+            class="relative inline-flex rounded-full h-3 w-3 bg-emerald-400"
+          ></span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Menú desplegable móvil -->
+    <div
+      class="md:hidden border-t border-white/5 bg-slate-950/95 backdrop-blur-sm"
+      data-menu
+      hidden
+    >
+      <nav
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-2 text-sm"
+        aria-label="Navegación móvil"
+      >
+        <a
+          href="/"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Inicio
+        </a>
+        <a
+          href="/servicios"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Servicios
+        </a>
+        <a
+          href="/centro"
+          class="py-1 text-emerald-300"
+          data-menu-item
+        >
+          Cómo trabajamos
+        </a>
+        <a
+          href="/equipo"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Equipo
+        </a>
+        <a
+          href="/contacto"
+          class="py-1 text-slate-200 hover:text-emerald-300 transition-colors"
+          data-menu-item
+        >
+          Contacto
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CÓMO TRABAJAMOS -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 space-y-16">
+    <!-- HERO / INTRO -->
+    <section class="space-y-8">
+      <div class="space-y-4 max-w-3xl" data-animate="left">
+        <p class="text-xs font-medium tracking-[0.22em] text-emerald-400 uppercase">
+          Cómo trabajamos
+        </p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
+          Queremos que sepas qué va a pasar antes de venir
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base">
+          Desde el momento en que nos contactas hasta el final del tratamiento, nuestra idea
+          es que tengas la información clara, te sientas acompañado y veas sentido a cada paso
+          que damos juntos.
+        </p>
+      </div>
+
+      <!-- Tarjetas gorditas, con animación -->
+      <div class="grid gap-5 sm:gap-6 sm:grid-cols-3 text-xs sm:text-sm">
+        <div
+          class="rounded-3xl border border-emerald-400/40 bg-emerald-500/10 p-5 sm:p-6 min-h-[120px] flex flex-col gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_18px_rgba(16,185,129,0.35)] hover:border-emerald-300/80"
+          data-animate="left"
+        >
+          <p class="font-medium text-emerald-100 flex items-center gap-2">
+            <span class="text-lg">📞</span>
+            Primer contacto sencillo
+          </p>
+          <p class="text-emerald-50">
+            Nos escribes o llamas, nos cuentas qué te pasa y te orientamos sobre el tipo
+            de sesión y el momento ideal para empezar.
+          </p>
+        </div>
+
+        <div
+          class="rounded-3xl border border-sky-400/40 bg-sky-500/10 p-5 sm:p-6 min-h-[120px] flex flex-col gap-2 transition-transform transition-shadow duration-300 hover:-translate-y-1.5 hover:shadow-[0_0_18px_rgba(56,189,248,0.35)] hover:border-sky-300/80"
+          data-animate="up"
+        >
+          <p class="font-medium text-sky-100 flex items-center gap-2">
+            <span class="text-lg">📝</span>
+            Primera sesión con tiempo
+          </p>
+          <p class="text-sky-50">
+            Valoramos tu caso, revisamos pruebas, exploramos y empezamos a tratar
+            desde la primera visita siempre que sea posible.
+          </p>
+        </div>
+
+        <div
+          class="rounded-3xl border border-purple-400/40 bg-purple-500/10 p-5 sm:p-6 min-h-[120px] flex flex-col gap-2 transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_18px_rgba(192,132,252,0.35)] hover:border-purple-300/80 hover:rotate-[0.3deg]"
+          data-animate="right"
+        >
+          <p class="font-medium text-purple-100 flex items-center gap-2">
+            <span class="text-lg">📈</span>
+            Seguimiento con sentido
+          </p>
+          <p class="text-purple-50">
+            Marcamos objetivos, medimos cambios y ajustamos el tratamiento para que
+            cada sesión tenga un propósito claro.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESDE QUE NOS CONTACTAS -->
+    <section class="space-y-8" aria-labelledby="desde-contacto-title">
+      <header class="space-y-2" data-animate="up">
+        <h2
+          id="desde-contacto-title"
+          class="text-2xl sm:text-3xl font-semibold tracking-tight"
+        >
+          Desde que nos contactas hasta que reservas tu cita
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl">
+          El primer contacto es simplemente una conversación. No hace falta que tengas
+          todo claro: para eso estamos. Te orientamos sobre si la fisioterapia puede ayudarte
+          y qué tipo de sesión encaja mejor.
+        </p>
+      </header>
+
+      <div class="grid gap-6 md:grid-cols-3 text-xs sm:text-sm">
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 space-y-2 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/60 hover:shadow-[0_0_14px_rgba(16,185,129,0.3)]"
+          data-animate="left"
+        >
+          <p class="font-medium text-slate-100 flex items-center gap-2">
+            <span>1.</span>
+            Nos llamas, escribes o mandas un email
+          </p>
+          <p class="text-slate-300">
+            Nos cuentas brevemente qué te pasa: desde cuándo, qué te molesta más
+            y qué te preocupa. No hace falta entrar en detalles técnicos.
+          </p>
+        </article>
+
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 space-y-2 transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/60 hover:shadow-[0_0_14px_rgba(56,189,248,0.3)]"
+          data-animate="up"
+        >
+          <p class="font-medium text-slate-100 flex items-center gap-2">
+            <span>2.</span>
+            Te proponemos el tipo de sesión
+          </p>
+          <p class="text-slate-300">
+            Según tu caso, te sugerimos una primera visita orientada a valoración,
+            tratamiento inicial o revisión si ya vienes tratado de otro centro.
+          </p>
+        </article>
+
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 space-y-2 transition-all duration-300 hover:-translate-y-1 hover:border-purple-400/60 hover:shadow-[0_0_14px_rgba(192,132,252,0.3)]"
+          data-animate="right"
+        >
+          <p class="font-medium text-slate-100 flex items-center gap-2">
+            <span>3.</span>
+            Reservamos día y hora
+          </p>
+          <p class="text-slate-300">
+            Acordamos contigo el horario que mejor te encaje dentro de nuestra agenda
+            y te explicamos lo básico: duración, precio orientativo y qué traer.
+          </p>
+        </article>
+      </div>
+
+      <p class="text-[11px] sm:text-xs text-slate-500" data-animate="up">
+        * La reserva se confirma siempre mediante conversación directa (teléfono, WhatsApp o email).
+        No utilizamos sistemas de reservas ni pagos online en esta web.
+      </p>
+    </section>
+
+    <!-- PRIMERA SESIÓN EN DETALLE -->
+    <section class="space-y-8" aria-labelledby="primera-sesion-title">
+      <header class="space-y-2" data-animate="up">
+        <h2
+          id="primera-sesion-title"
+          class="text-2xl sm:text-3xl font-semibold tracking-tight"
+        >
+          Qué ocurre en la primera sesión
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl">
+          La primera sesión es clave: es donde más hablamos, más preguntamos y más escuchamos.
+          A partir de ahí, el tratamiento tiene mucho más sentido.
+        </p>
+      </header>
+
+      <div class="grid gap-8 lg:grid-cols-[1.1fr,0.9fr] items-start">
+        <!-- Detalle paso a paso -->
+        <div class="space-y-4 text-xs sm:text-sm">
+          <div
+            class="rounded-3xl border border-white/10 bg-slate-900/70 p-5 sm:p-6 space-y-2.5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/60 hover:shadow-[0_0_14px_rgba(16,185,129,0.3)]"
+            data-animate="left"
+          >
+            <p class="font-medium text-slate-100 flex items-center gap-2">
+              <span>🗣️</span>
+              Hablamos de tu historia
+            </p>
+            <p class="text-slate-300">
+              Nos cuentas cuándo empezó el problema, cómo ha evolucionado, qué tratamientos
+              has probado y qué cosas te cuesta hacer ahora por culpa del dolor o la lesión.
+            </p>
+          </div>
+
+          <div
+            class="rounded-3xl border border-white/10 bg-slate-900/70 p-5 sm:p-6 space-y-2.5 transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/60 hover:shadow-[0_0_14px_rgba(56,189,248,0.3)]"
+            data-animate="up"
+          >
+            <p class="font-medium text-slate-100 flex items-center gap-2">
+              <span>📋</span>
+              Exploración y valoración física
+            </p>
+            <p class="text-slate-300">
+              Observamos tu movimiento, probamos fuerza, movilidad y, si hace falta,
+              realizamos tests específicos. Si traes pruebas médicas, las revisamos contigo.
+            </p>
+          </div>
+
+          <div
+            class="rounded-3xl border border-white/10 bg-slate-900/70 p-5 sm:p-6 space-y-2.5 transition-all duration-300 hover:-translate-y-1 hover:border-purple-400/60 hover:shadow-[0_0_14px_rgba(192,132,252,0.3)]"
+            data-animate="right"
+          >
+            <p class="font-medium text-slate-100 flex items-center gap-2">
+              <span>💡</span>
+              Explicación clara y plan inicial
+            </p>
+            <p class="text-slate-300">
+              Te explicamos qué creemos que está pasando, qué opciones tenemos y qué
+              cambios podemos esperar. Juntos decidimos cómo empezar el tratamiento.
+            </p>
+          </div>
+        </div>
+
+        <!-- Info rápida / práctica -->
+        <div class="space-y-4 text-xs sm:text-sm">
+          <div
+            class="rounded-3xl border border-emerald-400/40 bg-emerald-500/5 p-5 sm:p-6 space-y-2.5 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_16px_rgba(16,185,129,0.35)]"
+            data-animate="up"
+          >
+            <p class="text-xs font-medium tracking-[0.22em] text-emerald-300 uppercase">
+              Duración y ropa
+            </p>
+            <p class="text-slate-50">
+              La primera sesión suele durar entre 45 y 60 minutos.
+            </p>
+            <p class="text-emerald-50">
+              Ven con ropa cómoda que te permita moverte y, si es posible, que deje
+              accesible la zona que más te molesta (por ejemplo, pantalón corto si es rodilla).
+            </p>
+          </div>
+
+          <div
+            class="rounded-3xl border border-white/10 bg-slate-900/70 p-5 sm:p-6 space-y-2.5 transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/60 hover:shadow-[0_0_14px_rgba(251,191,36,0.3)]"
+            data-animate="up"
+          >
+            <p class="text-xs font-medium tracking-[0.22em] text-slate-400 uppercase">
+              Qué puedes notar después
+            </p>
+            <p class="text-slate-300">
+              Es normal sentir algún cambio tras la sesión: alivio, ligera molestia muscular
+              o sensación de “haber trabajado”. Te explicaremos qué es esperable en tu caso
+              y qué hacer si algo te preocupa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EL CENTRO Y EL MATERIAL -->
+    <section class="space-y-8" aria-labelledby="centro-material-title">
+      <header class="space-y-2" data-animate="up">
+        <h2
+          id="centro-material-title"
+          class="text-2xl sm:text-3xl font-semibold tracking-tight"
+        >
+          El centro y el material con el que trabajamos
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl">
+          No se trata de tener máquinas por tenerlas, sino de contar con el espacio y el material
+          necesarios para valorar bien y ayudarte a recuperar tu función en el mundo real.
+        </p>
+      </header>
+
+      <div class="grid gap-6 lg:grid-cols-[1.1fr,0.9fr] items-start">
+        <!-- Lista de recursos -->
+        <div class="grid gap-4 sm:grid-cols-2 text-xs sm:text-sm">
+          <div
+            class="rounded-3xl border border-white/10 bg-slate-900/70 p-4 space-y-1.5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/60 hover:shadow-[0_0_12px_rgba(16,185,129,0.3)]"
+            data-animate="left"
+          >
+            <p class="font-medium text-slate-100 flex items-center gap-2">
+              <span>🛏️</span>
+              Salas de tratamiento individuales
+            </p>
+            <p class="text-slate-300">
+              Camillas cómodas, espacio tranquilo y privacidad para que te sientas a gusto
+              durante las sesiones.
+            </p>
+          </div>
+
+          <div
+            class="rounded-3xl border border-white/10 bg-slate-900/70 p-4 space-y-1.5 transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/60 hover:shadow-[0_0_12px_rgba(56,189,248,0.3)]"
+            data-animate="up"
+          >
+            <p class="font-medium text-slate-100 flex items-center gap-2">
+              <span>🏋️‍♂️</span>
+              Zona de ejercicio y readaptación
+            </p>
+            <p class="text-slate-300">
+              Material para trabajar fuerza, equilibrio y control del movimiento de forma progresiva.
+            </p>
+          </div>
+
+          <div
+            class="rounded-3xl border border-white/10 bg-slate-900/70 p-4 space-y-1.5 transition-all duration-300 hover:-translate-y-1 hover:border-purple-400/60 hover:shadow-[0_0_12px_rgba(192,132,252,0.3)]"
+            data-animate="up"
+          >
+            <p class="font-medium text-slate-100 flex items-center gap-2">
+              <span>📊</span>
+              Elementos de valoración
+            </p>
+            <p class="text-slate-300">
+              Tests funcionales, mediciones de rango de movimiento y fuerza para seguir tu evolución.
+            </p>
+          </div>
+
+          <div
+            class="rounded-3xl border border-white/10 bg-slate-900/70 p-4 space-y-1.5 transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/60 hover:shadow-[0_0_12px_rgba(251,191,36,0.3)]"
+            data-animate="right"
+          >
+            <p class="font-medium text-slate-100 flex items-center gap-2">
+              <span>🧰</span>
+              Herramientas de terapia manual
+            </p>
+            <p class="text-slate-300">
+              Técnicas manuales, movilización y otras herramientas cuando realmente aportan valor
+              a tu caso.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tarjeta resumen filosofía del centro -->
+        <div
+          class="rounded-3xl border border-emerald-400/40 bg-emerald-500/5 p-5 sm:p-6 text-xs sm:text-sm space-y-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_18px_rgba(16,185,129,0.35)]"
+          data-animate="up"
+        >
+          <p class="text-xs font-medium tracking-[0.22em] text-emerald-300 uppercase">
+            Más que un sitio con camillas
+          </p>
+          <p class="text-slate-50">
+            El centro está pensado para que puedas entender tu problema, moverte,
+            probar ejercicios y ver qué te ayuda.
+          </p>
+          <p class="text-emerald-50">
+            Nuestro objetivo es que salgas sabiendo algo más sobre tu cuerpo y con
+            la sensación de que lo que has hecho en la sesión tiene sentido.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEGUIMIENTO Y FINAL DEL TRATAMIENTO -->
+    <section class="space-y-8" aria-labelledby="seguimiento-title">
+      <header class="space-y-2" data-animate="up">
+        <h2
+          id="seguimiento-title"
+          class="text-2xl sm:text-3xl font-semibold tracking-tight"
+        >
+          Seguimiento, alta y qué pasa después
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl">
+          No buscamos que dependas de venir semana tras semana sin motivo. La idea es que
+          cada sesión tenga un propósito y que, poco a poco, necesites menos ayuda.
+        </p>
+      </header>
+
+      <div class="grid gap-6 md:grid-cols-3 text-xs sm:text-sm">
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 space-y-2.5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/60 hover:shadow-[0_0_14px_rgba(16,185,129,0.3)]"
+          data-animate="left"
+        >
+          <p class="font-medium text-slate-100 flex items-center gap-2">
+            <span>📆</span>
+            Planificación de sesiones
+          </p>
+          <p class="text-slate-300">
+            En función de tu caso, acordamos una frecuencia de visitas (por ejemplo, semanal
+            al principio) y la vamos ajustando según cómo te encuentres.
+          </p>
+        </article>
+
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 space-y-2.5 transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/60 hover:shadow-[0_0_14px_rgba(56,189,248,0.3)]"
+          data-animate="up"
+        >
+          <p class="font-medium text-slate-100 flex items-center gap-2">
+            <span>✅</span>
+            Alta progresiva
+          </p>
+          <p class="text-slate-300">
+            Cuando la mejoría se mantiene y te ves capaz de gestionar mejor tu día a día,
+            espaciamos sesiones hasta que no las necesites de forma regular.
+          </p>
+        </article>
+
+        <article
+          class="rounded-3xl border border-white/10 bg-slate-900/60 p-5 sm:p-6 space-y-2.5 transition-all duration-300 hover:-translate-y-1 hover:border-purple-400/60 hover:shadow-[0_0_14px_rgba(192,132,252,0.3)]"
+          data-animate="right"
+        >
+          <p class="font-medium text-slate-100 flex items-center gap-2">
+            <span>🔁</span>
+            Sabes qué hacer si el dolor vuelve
+          </p>
+          <p class="text-slate-300">
+            Te explicamos qué señales vigilar, qué ejercicios mantener y cuándo puede ser
+            buena idea volver a consultarnos.
+          </p>
+        </article>
+      </div>
+
+      <p class="text-[11px] sm:text-xs text-slate-500" data-animate="up">
+        * Cada proceso es diferente. Hay personas que necesitan pocas sesiones y otras
+        que requieren un seguimiento más largo. Lo importante es que lo sepas y lo
+        entiendas desde el principio.
+      </p>
+    </section>
+
+    <!-- Semilla para que Tailwind no purgue clases de animación -->
+    <div class="hidden opacity-0 opacity-100 -translate-x-10 translate-x-10 translate-y-10 translate-x-0 translate-y-0"></div>
+  </main>
+
+  <!-- Script: menú hamburguesa + animaciones scroll -->
+  <script>
+    // Menú móvil
+    const toggle = document.querySelector("[data-menu-toggle]");
+    const menu = document.querySelector("[data-menu]");
+    const items = document.querySelectorAll("[data-menu-item]");
+
+    if (toggle && menu) {
+      const closeMenu = () => {
+        menu.hidden = true;
+        toggle.setAttribute("aria-expanded", "false");
+      };
+
+      const openMenu = () => {
+        menu.hidden = false;
+        toggle.setAttribute("aria-expanded", "true");
+      };
+
+      toggle.addEventListener("click", () => {
+        const isOpen = toggle.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      items.forEach((item) => {
+        item.addEventListener("click", () => {
+          closeMenu();
+        });
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+          closeMenu();
+        }
+      });
+    }
+
+    // Animaciones al hacer scroll
+    const animatedEls = document.querySelectorAll("[data-animate]");
+
+    const applyHiddenState = (el) => {
+      const dir = el.getAttribute("data-animate") || "up";
+
+      el.classList.add("transition-all", "duration-700", "ease-out", "will-change-transform", "will-change-opacity");
+
+      el.classList.remove(
+        "opacity-100",
+        "translate-x-0",
+        "translate-y-0",
+        "-translate-x-10",
+        "translate-x-10",
+        "translate-y-10"
+      );
+
+      el.classList.add("opacity-0");
+
+      if (dir === "left") {
+        el.classList.add("-translate-x-10");
+      } else if (dir === "right") {
+        el.classList.add("translate-x-10");
+      } else {
+        el.classList.add("translate-y-10");
+      }
+    };
+
+    const applyVisibleState = (el) => {
+      const dir = el.getAttribute("data-animate") || "up";
+
+      el.classList.remove("opacity-0", "-translate-x-10", "translate-x-10", "translate-y-10");
+      el.classList.add("opacity-100");
+
+      if (dir === "left" || dir === "right") {
+        el.classList.add("translate-x-0");
+      } else {
+        el.classList.add("translate-y-0");
+      }
+    };
+
+    if (animatedEls.length > 0 && "IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const el = entry.target;
+            if (entry.isIntersecting) {
+              applyVisibleState(el);
+            } else {
+              applyHiddenState(el);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      animatedEls.forEach((el) => {
+        applyHiddenState(el);
+        observer.observe(el);
+      });
+    }
+  </script>
+</BaseLayout>
